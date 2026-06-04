@@ -47,7 +47,7 @@ const ASSIGNMENTS: Assignment[] = [
   { id: "assignment12", week: 12, title: "OOP Classes",                     description: "Model a Task Manager using a Python class.",                     type: "assignment" },
   { id: "assignment13", week: 13, title: "Inheritance & Polymorphism",      description: "Extend Task Manager with specialised task types.",               type: "assignment" },
   { id: "assignment14", week: 14, title: "Advanced Features",               description: "Add decorators and generators to the task pipeline.",             type: "assignment" },
-  { id: "review15",     week: 15, title: "Review: File I/O, OOP & Advanced","description": "Consolidate file handling, OOP and advanced Python.",          type: "review"     },
+  { id: "review15",     week: 15, title: "Review: File I/O, OOP & Advanced", description: "Consolidate file handling, OOP and advanced Python.",          type: "review"     },
   { id: "exam16",       week: 16, title: "Final Exam Practice",             description: "Comprehensive practice exam covering the full course.",           type: "exam"       },
 ];
 
