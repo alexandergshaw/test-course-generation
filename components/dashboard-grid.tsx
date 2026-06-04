@@ -29,16 +29,19 @@ const unlockedFeatures: Record<string, string> = {
 
 export default function DashboardGrid() {
   const [assignments, setAssignments] = useState<AssignmentStatus[]>([]);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     fetch("/api/assignment-status")
       .then((response) => response.json())
-      .then((data) => setAssignments(data.assignments ?? []));
+      .then((data) => setAssignments(data.assignments ?? []))
+      .catch(() => setError("Unable to load assignment status right now."));
   }, []);
 
   return (
     <div className="mx-auto max-w-6xl p-8">
       <h1 className="mb-6 text-3xl font-bold">Python Productivity Hub</h1>
+      {error ? <p className="mb-4 text-sm text-red-300">{error}</p> : null}
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
         {assignments.map((item) => (
           <article
